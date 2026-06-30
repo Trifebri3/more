@@ -1,0 +1,22 @@
+{
+  "name": "MORE Barber Booking System",
+  "short_name": "MORE",
+  "description": "Re-define Your Grooming Experience with MORE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#1E6EBD",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://placehold.co/192x192/000000/ffffff.png?text=MORE",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://placehold.co/512x512/000000/ffffff.png?text=MORE",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

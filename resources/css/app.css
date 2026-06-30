@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   LUXURY CLASSIC BRAND COLORS VARIABLES
+   ======================================== */
+
+:root {
+  /* Brand Colors */
+  --brand-vinto: #1E6EBD;     /* Original Blue */
+  --brand-pudar: #2C2A29;     /* Warm Charcoal */
+  --brand-tinta: #1C1B1A;     /* Dark Charcoal Text */
+  --brand-natural: #F5F2EB;   /* Accent Champagne Cream */
+  --brand-noir: #121110;      /* Deep Dark Slate */
+  --brand-orange: #FA5424;    /* Orange Accent */
+
+  /* Semantic */
+  --color-primary: #1E6EBD;
+  --color-secondary: #2C2A29;
+  --color-dark: #1C1B1A;
+  --color-neutral: #F5F2EB;
+  --color-white: #FFFFFF;
+}
+
+/* ========================================
+   FONT FACE
+   ======================================== */
+
+@font-face {
+  font-family: 'Now';
+  src: url('/fonts/Now-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Now';
+  src: url('/fonts/Now-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+html {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAF8F5;
+  color: #1C1B1A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Now', sans-serif;
+}
+
+/* ========================================
+   CUSTOM COMPONENTS
+   ======================================== */
+
+@layer components {
+  /* BUTTONS */
+  .btn-primary {
+    @apply bg-[#1E6EBD] text-white font-semibold py-3 px-6 rounded-lg
+           transition-all duration-300 hover:bg-[#155A9E]
+           focus:outline-none focus:ring-2 focus:ring-[#1E6EBD] focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-[#2C2A29] text-white font-semibold py-3 px-6 rounded-lg
+           transition-all duration-300 hover:bg-[#1C1B1A]
+           focus:outline-none focus:ring-2 focus:ring-[#2C2A29] focus:ring-offset-2;
+  }
+
+  .btn-outline-primary {
+    @apply border-2 border-[#1E6EBD] text-[#1E6EBD] font-semibold py-3 px-6 rounded-lg
+           transition-all duration-300 hover:bg-[#1E6EBD] hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-[#1E6EBD] focus:ring-offset-2;
+  }
+
+  .btn-outline-secondary {
+    @apply border-2 border-[#2C2A29] text-[#2C2A29] font-semibold py-3 px-6 rounded-lg
+           transition-all duration-300 hover:bg-[#2C2A29] hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-[#2C2A29] focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply text-[#1E6EBD] font-semibold py-3 px-6 rounded-lg
+           transition-all duration-300 hover:bg-[#1E6EBD] hover:bg-opacity-10
+           focus:outline-none focus:ring-2 focus:ring-[#1E6EBD] focus:ring-offset-2;
+  }
+
+  /* CARDS */
+  .card {
+    @apply bg-white rounded-xl shadow-sm overflow-hidden
+           border border-[#FAF8F5]
+           transition-all duration-300 hover:shadow-md;
+  }
+
+  .card-primary {
+    @apply bg-[#1E6EBD] text-white rounded-xl shadow-sm overflow-hidden;
+  }
+
+  .card-secondary {
+    @apply bg-[#2C2A29] text-white rounded-xl shadow-sm overflow-hidden;
+  }
+
+  /* BADGES */
+  .badge-primary {
+    @apply bg-[#1E6EBD] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+
+  .badge-secondary {
+    @apply bg-[#2C2A29] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+
+  .badge-dark {
+    @apply bg-[#1C1B1A] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+
+  .badge-neutral {
+    @apply bg-[#F5F2EB] text-[#1C1B1A] text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+
+  /* HEADINGS */
+  .heading-1 {
+    @apply font-now text-4xl md:text-5xl lg:text-6xl font-bold text-[#1C1B1A];
+  }
+
+  .heading-2 {
+    @apply font-now text-3xl md:text-4xl font-bold text-[#1C1B1A];
+  }
+
+  .heading-3 {
+    @apply font-now text-2xl md:text-3xl font-bold text-[#1C1B1A];
+  }
+
+  .heading-4 {
+    @apply font-now text-xl md:text-2xl font-bold text-[#1C1B1A];
+  }
+
+  /* SECTION BACKGROUNDS */
+  .section-primary {
+    @apply bg-[#1E6EBD] text-white py-12 md:py-20;
+  }
+
+  .section-secondary {
+    @apply bg-[#2C2A29] text-white py-12 md:py-20;
+  }
+
+  .section-dark {
+    @apply bg-[#1C1B1A] text-white py-12 md:py-20;
+  }
+
+  .section-light {
+    @apply bg-[#F5F2EB] py-12 md:py-20;
+  }
+
+  /* FORM */
+  .form-input {
+    @apply w-full rounded-lg border border-[#FAF8F5] px-4 py-3
+           focus:border-[#1E6EBD] focus:ring-2 focus:ring-[#1E6EBD] focus:ring-opacity-20
+           transition-all duration-300 outline-none text-[#1C1B1A];
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-[#1C1B1A] mb-1;
+  }
+
+  /* CONTAINER */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY DEFINITIONS
+   ======================================== */
+html.large-text {
+  font-size: 112.5%; /* Scales up base fonts */
+}
+
+html.xlarge-text {
+  font-size: 125%; /* Scales up base fonts further */
+}
+
+html.high-contrast {
+  filter: contrast(1.3) saturate(0.5);
+}
+
+/* ========================================
+   PRINTING STYLES FOR TICKET PDF
+   ======================================== */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  /* Hide UI elements and backgrounds during print */
+  header, 
+  footer, 
+  .no-print, 
+  .accessibility-widget,
+  button {
+    display: none !important;
+  }
+  
+  #print-ticket {
+    display: block !important;
+    margin: 0 auto !important;
+    border: 1px solid #E5E1D8 !important;
+    box-shadow: none !important;
+    max-width: 350px !important;
+    padding: 24px !important;
+    background-color: #ffffff !important;
+  }
+}
